@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
+
+  const evento = {
+    nombre: "Salsa dance party",
+    fecha: "24/07/2020",
+    hora: "16:00",
+    lugar: {
+      direccion: "Done Bikendi Kalea, 2",
+      ciudad: "Bilbao"
+    }
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{evento.nombre}</h1>
+      <p>Fecha: {evento.fecha}</p>
+      <p>Hora: {evento.hora}</p>
+      <p>Dirección: {evento.lugar.direccion}</p>
+      <p>Ciudad: {evento.lugar.ciudad}</p>
     </div>
   );
 }
